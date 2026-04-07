@@ -1,28 +1,15 @@
 version: '3.8'
 
 services:
-  jucepi-chatbot-backend:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: jucepi-chatbot-backend
+  ollama:
+    image: ollama/ollama:latest
+    container_name: jucepi-ollama
     ports:
-      - "8000:8000"
-    environment:
-      - HOST=0.0.0.0
-      - PORT=8000
-      - OLLAMA_URL=${OLLAMA_URL:-http://localhost:11434}
-      - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3:latest}
-      - CORS_ORIGINS=["https://dev-assistente.jucepi.pi.gov.br","http://localhost:5173","http://localhost:3000","http://10.40.25.217:5173"]
-      - LOG_LEVEL=INFO
-      - RAG_TOP_K=3
-      - EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
-      - LLM_TEMPERATURE=0.7
-      - LLM_MAX_TOKENS=512
-      - LLM_TIMEOUT=30
+      - "11434:11434"
     volumes:
-      - ./data:/app/data
-      - ./models:/root/.cache/torch
+      - ollama_data:/root/.ollama
+    networks:
+      - chatbot-network
     deploy:
       resources:
         reservations:
@@ -31,3 +18,44 @@ services:
               count: 1
               capabilities: [gpu]
     restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  jucepi-chatbot-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jucepi-chatbot-backend
+    ports:
+      - "5000:5000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=5000
+      - OLLAMA_URL=http://ollama:11434
+      - OLLAMA_MODEL=llama3:latest
+      - CORS_ORIGINS=["https://dev-assistente.jucepi.pi.gov.br","http://localhost:5173","http://localhost:3000","http://10.40.25.217:5173","http://localhost:5000"]
+      - LOG_LEVEL=INFO
+      - RAG_TOP_K=3
+      - EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
+      - LLM_TEMPERATURE=0.7
+      - LLM_MAX_TOKENS=512
+      - LLM_TIMEOUT=30
+    volumes:
+      - ./data:/app/data
+    networks:
+      - chatbot-network
+    restart: unless-stopped
+    depends_on:
+      ollama:
+        condition: service_healthy
+
+volumes:
+  ollama_data:
+
+networks:
+  chatbot-network:
+    driver: bridge
