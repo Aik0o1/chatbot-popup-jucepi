@@ -13,7 +13,7 @@ services:
       - PORT=8000
       - OLLAMA_URL=${OLLAMA_URL:-http://localhost:11434}
       - OLLAMA_MODEL=${OLLAMA_MODEL:-llama3:latest}
-      - CORS_ORIGINS=["https://dev-assistente.jucepi.pi.gov.br","http://localhost:5173","http://localhost:3000"]
+      - CORS_ORIGINS=["https://dev-assistente.jucepi.pi.gov.br","http://localhost:5173","http://localhost:3000","http://10.40.25.217:5173"]
       - LOG_LEVEL=INFO
       - RAG_TOP_K=3
       - EMBEDDING_MODEL=sentence-transformers/all-MiniLM-L6-v2
@@ -31,25 +31,3 @@ services:
               count: 1
               capabilities: [gpu]
     restart: unless-stopped
-    networks:
-      - chatbot-network
-
-  # Nginx como reverse proxy com SSL
-  nginx:
-    image: nginx:alpine
-    container_name: jucepi-chatbot-nginx
-    ports:
-      - "80:80"
-      - "443:443"
-    volumes:
-      - ./nginx.conf:/etc/nginx/nginx.conf:ro
-      - ./ssl:/etc/nginx/ssl:ro
-    depends_on:
-      - jucepi-chatbot-backend
-    restart: unless-stopped
-    networks:
-      - chatbot-network
-
-networks:
-  chatbot-network:
-    driver: bridge

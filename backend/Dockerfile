@@ -1,20 +1,25 @@
-# Dockerfile otimizado para GPU (NVIDIA CUDA)
-FROM nvidia/cuda:12.1.0-runtime-ubuntu22.04
+# Dockerfile para GPU NVIDIA
+FROM nvidia/cuda:12.4.1-runtime-ubuntu22.04
 
 # Definir variáveis para evitar prompts interativos
 ENV DEBIAN_FRONTEND=noninteractive
 
-# Instalar Python e dependências do sistema
+# Instalar Python 3.11 e dependências do sistema
 RUN apt-get update && apt-get install -y \
     python3.11 \
     python3.11-venv \
     python3-pip \
+    python3.11-dev \
     gcc \
     g++ \
     && rm -rf /var/lib/apt/lists/*
 
 # Criar link simbólico para python3
 RUN ln -sf /usr/bin/python3.11 /usr/bin/python
+RUN ln -sf /usr/bin/python3.11 /usr/bin/python3
+
+# Atualizar pip
+RUN python3 -m pip install --no-cache-dir --upgrade pip
 
 # Definir diretório de trabalho
 WORKDIR /app
@@ -22,11 +27,8 @@ WORKDIR /app
 # Copiar requirements
 COPY requirements.txt .
 
-# Instalar dependências Python com suporte a GPU
-RUN pip install --no-cache-dir --upgrade pip && \
-    pip install --no-cache-dir -r requirements.txt && \
-    # Instalar versão GPU do FAISS
-    pip install --no-cache-dir faiss-gpu
+# Instalar dependências Python
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copiar código da aplicação
 COPY . .
