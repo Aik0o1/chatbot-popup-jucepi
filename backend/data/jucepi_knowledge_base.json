@@ -1,0 +1,126 @@
+{
+  "organization": {
+    "name": "JUCEPI - Junta Comercial do Estado do Piauí",
+    "description": "Órgão responsável pelo registro mercantil de empresas no estado do Piauí",
+    "contact": {
+      "phone": "(86) 3230-8800 / 3230-8810",
+      "email": "jucepi@jucepi.pi.gov.br",
+      "address": "Rua General Osório, 3002, Cabral, Teresina-PI. CEP: 64000-580",
+      "business_hours": "07h30 às 13h30",
+      "website": "https://www.pi.gov.br/orgao/junta-comercial-do-estado-do-piaui-jucepi/",
+      "portal": "https://www.piauidigital.pi.gov.br"
+    }
+  },
+  "faqs": [
+    {
+      "id": 1,
+      "question": "O que eu preciso saber para abrir uma empresa no Piauí?",
+      "answer": "Antes de dar entrada no processo de constituição de sua empresa na Junta Comercial do Piauí (Jucepi), realize o planejamento do negócio, faça uma pesquisa de mercado e contrate um profissional contábil ou advogado para cuidar da parte burocrática. Na Jucepi, a abertura de empresas é realizada exclusivamente pela internet por meio do portal GOV.PI Empresas (www.piauidigital.pi.gov.br). Além da internet, o empreendedor precisa adquirir um certificado digital pessoa física tipo e-CPF A1 ou A3 ou ter uma conta GOV.BR nível prata ou ouro.",
+      "category": "Abertura de Empresa",
+      "keywords": ["abrir empresa", "constituição", "planejamento", "negócio"]
+    },
+    {
+      "id": 2,
+      "question": "Quais os documentos necessários para abrir uma empresa na Junta Comercial?",
+      "answer": "A documentação necessária depende da natureza jurídica da empresa. Na Jucepi, estão disponíveis as seguintes naturezas jurídicas: Empresário Individual (pessoa física que exerce profissionalmente atividade econômica organizada), Sociedade Empresária Limitada (formada por uma ou mais pessoas para a exploração de atividade econômica) e Cooperativa (associação de pessoas com interesses comuns, economicamente organizada). No portal GOV.PI Empresas (www.piauidigital.pi.gov.br), o empreendedor encontra o passo a passo para a abertura de cada tipo de empresa.",
+      "category": "Documentação",
+      "keywords": ["documentos", "empresa individual", "sociedade limitada", "cooperativa"]
+    },
+    {
+      "id": 3,
+      "question": "Onde encontro os valores das taxas da Jucepi?",
+      "answer": "A tabela de pagamento das taxas pode ser encontrada no site: https://portal.pi.gov.br/jucepi/tabela-de-precos/. Importante: o documento de arrecadação (DAR) é emitido no sistema GOV.PI Empresas e é condicionado ao protocolo do processo.",
+      "category": "Taxas e Valores",
+      "keywords": ["taxas", "valores", "preços", "DAR", "arrecadação"]
+    },
+    {
+      "id": 4,
+      "question": "Quais são os serviços disponíveis pela internet para o empreendedor?",
+      "answer": "No portal GOV.PI Empresas (www.piauidigital.pi.gov.br), o empreendedor pode realizar diversos serviços de forma 100% digital: Consulta de viabilidade (nome empresarial e endereço), Registro de abertura, alteração e baixa de empresas, Emissão de certidões (simplificada, específica e de inteiro teor), Autenticação de livros digitais e Consulta de processos.",
+      "category": "Serviços Online",
+      "keywords": ["serviços", "online", "digital", "portal", "consulta", "certidão"]
+    },
+    {
+      "id": 5,
+      "question": "Onde verificar a transmissão de documentos emitidos pela Jucepi?",
+      "answer": "A veracidade dos documentos emitidos pela Jucepi pode ser verificada no portal GOV.PI Empresas (www.piauidigital.pi.gov.br), no menu 'Serviços' > 'Verificação de Documentos', informando o número do protocolo e a chave de segurança contida no documento.",
+      "category": "Documentos",
+      "keywords": ["verificação", "documentos", "autenticidade", "protocolo", "chave de segurança"]
+    },
+    {
+      "id": 6,
+      "question": "Como faço para alterar os dados da minha empresa?",
+      "answer": "Para alterar dados da sua empresa registrada na Jucepi, acesse o portal GOV.PI Empresas (www.piauidigital.pi.gov.br) e utilize o serviço de alteração. Você precisará de um certificado digital e-CPF ou conta GOV.BR nível prata/ouro. As alterações mais comuns incluem mudança de endereço, sócios, capital social e atividade econômica.",
+      "category": "Alteração de Empresa",
+      "keywords": ["alterar", "modificar", "dados", "endereço", "sócios"]
+    },
+    {
+      "id": 7,
+      "question": "Como solicitar a baixa de uma empresa?",
+      "answer": "Para solicitar a baixa (encerramento) de uma empresa, acesse o portal GOV.PI Empresas (www.piauidigital.pi.gov.br) e selecione a opção de baixa. É necessário estar em dia com as obrigações fiscais e trabalhistas. Recomenda-se contratar um profissional contábil para orientar todo o processo de encerramento.",
+      "category": "Baixa de Empresa",
+      "keywords": ["baixa", "encerramento", "fechamento", "empresa inativa"]
+    },
+    {
+      "id": 8,
+      "question": "Qual é o tempo médio para abertura de uma empresa?",
+      "answer": "O tempo médio para abertura de uma empresa na Jucepi é de 2 a 5 dias úteis após o protocolo do pedido. Este prazo pode variar conforme a complexidade do processo e a documentação apresentada. O sistema GOV.PI Empresas permite acompanhar o status do seu processo em tempo real.",
+      "category": "Prazos",
+      "keywords": ["tempo", "prazo", "dias úteis", "acompanhamento"]
+    },
+    {
+      "id": 9,
+      "question": "Preciso de certificado digital para abrir uma empresa?",
+      "answer": "Sim, é necessário ter um certificado digital pessoa física tipo e-CPF A1 ou A3, ou uma conta GOV.BR nível prata ou ouro para acessar o portal GOV.PI Empresas e realizar o registro. O certificado digital garante a autenticidade e a segurança das transações.",
+      "category": "Certificação Digital",
+      "keywords": ["certificado digital", "e-CPF", "GOV.BR", "autenticação"]
+    },
+    {
+      "id": 10,
+      "question": "Como emitir uma certidão da minha empresa?",
+      "answer": "Para emitir uma certidão da sua empresa, acesse o portal GOV.PI Empresas (www.piauidigital.pi.gov.br), vá até 'Serviços' e selecione 'Emissão de Certidões'. Existem três tipos: Certidão Simplificada (dados básicos), Certidão Específica (informações sobre situação específica) e Certidão de Inteiro Teor (documento completo). Todas podem ser emitidas digitalmente.",
+      "category": "Certidões",
+      "keywords": ["certidão", "emissão", "simplificada", "específica", "inteiro teor"]
+    }
+  ],
+  "procedures": [
+    {
+      "id": "proc_001",
+      "title": "Passo a Passo para Abertura de Empresa",
+      "steps": [
+        "1. Planejamento: Defina o tipo de negócio, mercado-alvo e estrutura da empresa",
+        "2. Pesquisa: Verifique a viabilidade do nome empresarial no portal GOV.PI Empresas",
+        "3. Documentação: Reúna os documentos necessários conforme o tipo de empresa",
+        "4. Certificação: Obtenha um certificado digital e-CPF ou crie uma conta GOV.BR",
+        "5. Acesso: Entre no portal GOV.PI Empresas (www.piauidigital.pi.gov.br)",
+        "6. Preenchimento: Preencha o formulário com os dados da empresa",
+        "7. Pagamento: Gere e pague o DAR (Documento de Arrecadação)",
+        "8. Protocolo: Envie os documentos e aguarde a análise",
+        "9. Acompanhamento: Monitore o status do processo no portal",
+        "10. Conclusão: Receba o certificado de registro da empresa"
+      ]
+    },
+    {
+      "id": "proc_002",
+      "title": "Tipos de Natureza Jurídica",
+      "content": "A Jucepi oferece os seguintes tipos de natureza jurídica para registro: Empresário Individual (profissional autônomo), Sociedade Empresária Limitada (LTDA), Sociedade Anônima (S/A), Cooperativa e Sociedade Simples. Cada tipo possui requisitos e documentação específica."
+    }
+  ],
+  "important_links": [
+    {
+      "title": "Portal GOV.PI Empresas",
+      "url": "https://www.piauidigital.pi.gov.br",
+      "description": "Portal para registro e gestão de empresas"
+    },
+    {
+      "title": "Tabela de Taxas",
+      "url": "https://portal.pi.gov.br/jucepi/tabela-de-precos/",
+      "description": "Valores das taxas e emolumentos"
+    },
+    {
+      "title": "Site Oficial JUCEPI",
+      "url": "https://www.pi.gov.br/orgao/junta-comercial-do-estado-do-piaui-jucepi/",
+      "description": "Informações gerais sobre a JUCEPI"
+    }
+  ]
+}
